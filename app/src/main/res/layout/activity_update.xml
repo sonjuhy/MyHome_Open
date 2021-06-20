@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Setting.UpdateActivity">
+
+    <ImageView
+        android:id="@+id/Update_imageView"
+        android:layout_width="155dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="76dp"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/ic_launcher_new_foreground" />
+
+    <Button
+        android:id="@+id/Update_button"
+        android:layout_width="106dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="40dp"
+        android:text="업데이트"
+        android:background="@drawable/login_button_shape"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/UpdateCheck_button" />
+
+    <Button
+        android:id="@+id/UpdateCheck_button"
+        android:layout_width="106dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="최신버전 확인"
+        android:background="@drawable/login_button_shape"
+        app:layout_constraintEnd_toEndOf="@+id/Update_button"
+        app:layout_constraintTop_toBottomOf="@+id/LastVerShow_textView" />
+
+    <TextView
+        android:id="@+id/NowVerShow_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="22dp"
+        android:layout_marginBottom="33dp"
+        android:layout_gravity="center_vertical"
+        android:gravity="center"
+        android:text="TextView"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/LastVer_textView"
+        app:layout_constraintEnd_toEndOf="@+id/NowVer_textView"
+        app:layout_constraintTop_toBottomOf="@+id/NowVer_textView" />
+
+    <TextView
+        android:id="@+id/LastVer_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="303dp"
+        android:gravity="center"
+        android:text="최신버전"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/NowVer_textView"
+        app:layout_constraintStart_toStartOf="@+id/Update_button"
+        app:layout_constraintTop_toBottomOf="@+id/NowVerShow_textView" />
+
+    <TextView
+        android:id="@+id/LastVerShow_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center"
+        android:text="TextView"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="@+id/LastVer_textView"
+        app:layout_constraintTop_toBottomOf="@+id/LastVer_textView" />
+
+    <TextView
+        android:id="@+id/NowVer_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:gravity="center"
+        android:text="설치된 버전"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/NowVerShow_textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="29dp"
+        android:gravity="center"
+        android:text="MyHome"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/NowVer_textView"
+        app:layout_constraintEnd_toEndOf="@+id/Update_imageView"
+        app:layout_constraintStart_toStartOf="@+id/Update_imageView"
+        app:layout_constraintTop_toBottomOf="@+id/Update_imageView" />
+</android.support.constraint.ConstraintLayout>

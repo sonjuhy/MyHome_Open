@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.sonjunhyeok.myhome">
+
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+
+    <application
+        android:name=".Calander.MyHome"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher_new_foreground"
+        android:label="MyHome"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@mipmap/ic_launcher_new_foreground"
+        android:supportsRtl="true"
+        android:theme="@style/LightTheme"
+        android:usesCleartextTraffic="true">
+        <receiver android:name=".Light.LightWidget">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/light_widget_info" />
+        </receiver>
+
+        <activity android:name=".Light.LightReserveAddActivity"
+            android:theme="@style/LightTheme.NoActionbar"/>
+        <activity android:name=".Light.LightReserveActivity"
+            android:theme="@style/LightTheme.NoActionbar"/>
+        <activity
+            android:name=".Notice.NoticePopupActivity"
+            android:theme="@style/PopupMenu" />
+        <service
+            android:name=".MQTT_Main"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":remote" />
+
+        <activity android:name=".Notice.NoticeAddActivity" />
+        <activity android:name=".Notice.NoticeMainActivity" />
+        <activity
+            android:name=".LoadingActivity"
+            android:label="MyHome"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Weather.WeatherPlaceSearchActivity" />
+        <activity
+            android:name=".Weather.WeatherMainActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Light.LightActivity"
+            android:theme="@style/LightTheme.NoActionbar" />
+        <activity android:name=".Setting.AccountActivity" />
+        <activity android:name=".Setting.ChangeUserDataActivity" />
+        <activity android:name=".Setting.UpdateActivity" />
+        <activity android:name=".Setting.SettingActivity" />
+        <activity
+            android:name=".FileServer.RecycleBinActivity"
+            android:theme="@style/PopupMenu" />
+        <activity
+            android:name=".FileServer.RenameInputActivity"
+            android:theme="@style/PopupMenu" />
+        <activity
+            android:name=".FileServer.FileSettingActivity"
+            android:theme="@style/PopupMenu" />
+        <activity android:name=".DevLog.DevLogActivity" />
+        <activity
+            android:name=".FileServer.MakeFolderActivity"
+            android:theme="@style/PopupMenu" />
+        <activity
+            android:name=".FileServer.Popup_fileUploadActivity"
+            android:theme="@style/PopupMenu" />
+        <activity android:name=".FileServer.FileUploadActivity" />
+        <activity
+            android:name=".FileServer.Popup_fileActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/PopupMenu" />
+        <activity android:name=".FileServer.FileActivity" />
+        <activity android:name=".SigninActivity" />
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".LoginActivity"
+            android:label="MyHome" />
+        <activity
+            android:name=".Calander.CalenderActivity"
+            android:label="Calendar" />
+        <activity
+            android:name=".Calander.Calendar_add_Activity"
+            android:label="Calendar Add" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider" />
+        </provider>
+    </application>
+
+</manifest>

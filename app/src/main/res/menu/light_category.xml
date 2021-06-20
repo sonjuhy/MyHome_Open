@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_light_category_livingRoom"
+        android:orderInCategory="100"
+        android:title="거실"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_light_category_kitchen"
+        android:orderInCategory="100"
+        android:title="부엌"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_light_category_bathRoom"
+        android:orderInCategory="100"
+        android:title="화장실"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_light_category_balcony"
+        android:orderInCategory="100"
+        android:title="베란다"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_light_category_bigRoom"
+        android:orderInCategory="100"
+        android:title="큰방"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_light_category_middleRoom"
+        android:orderInCategory="100"
+        android:title="중간방"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_light_category_smallRoom"
+        android:orderInCategory="100"
+        android:title="작은방"
+        app:showAsAction="never" />
+</menu>

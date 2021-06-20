@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context = ".FileServer.FileUploadActivity">
+
+    <item android:id = "@+id/refresh_button"
+        android:title="새로고침"
+        android:icon ="@drawable/refresh"
+        app:showAsAction="always"/>
+    <item android:id = "@+id/fileupload_mkdir_button"
+        android:title="폴더생성"
+        app:showAsAction="withText"/>
+    <item android:id = "@+id/fileupload_refresh_button"
+        android:title="새로고침"
+        app:showAsAction="withText"/>
+    <item android:id = "@+id/fileupload_back_button"
+        android:title="나가기"
+        app:showAsAction="withText"/>
+</menu>

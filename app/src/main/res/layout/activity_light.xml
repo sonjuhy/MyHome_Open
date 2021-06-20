@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".Light.LightActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/light_toolbar"
+        android:background="#FFFFFF"
+        app:contentInsetStart="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerView_light"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <RelativeLayout
+            android:id="@+id/relative_light_top"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:elevation="15dp"
+            android:clipToPadding="true"
+            android:background="#FFFFFF"
+            >
+            <ImageView
+                android:id="@+id/light_imageView"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="1dp"
+                app:srcCompat="@drawable/light" />
+            <TextView
+                android:id="@+id/light_titleView"
+                android:layout_width="184dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="0dp"
+                android:elevation="3dp"
+                android:layout_toRightOf="@id/light_imageView"
+                android:gravity="center_vertical"
+                android:text="실내 조명 설정"
+                android:textColor="#000000"
+                android:textSize="20dp"
+                android:textStyle="bold"/>
+            <Button
+                android:id="@+id/light_room_category_button"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:background="#FFFFFF"
+                android:layout_centerVertical="true"
+                android:text="거실(기본)"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:layout_toRightOf="@+id/light_titleView"/>
+            <Button
+                android:id="@+id/light_room_refresh_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:background="#FFFFFF"
+                android:text="메뉴"
+                android:layout_toRightOf="@+id/light_room_category_button"/>
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView_light"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:scrollbars="horizontal"
+        android:background="@drawable/light_background"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/relative_light_bottom"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/light_toolbar"
+        >
+
+    </android.support.v7.widget.RecyclerView>
+    <RelativeLayout
+        android:id="@+id/relative_light_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerView_light"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/light_info_linear">
+            <TextView
+                android:id="@+id/light_selectView"
+                android:layout_width="114dp"
+                android:layout_height="65dp"
+                android:layout_marginLeft="10dp"
+                android:elevation="3dp"
+                android:gravity="center_vertical"
+                android:text="선택된 조명"
+                android:textColor="#000000"
+                android:textSize="20dp"
+                android:textStyle="bold"/>
+            <ToggleButton
+                android:id="@+id/light_selectmark_button"
+                android:background="@drawable/light_toggle_mark"
+                android:scaleType="fitCenter"
+                android:textOn=" "
+                android:textOff=" "
+                android:layout_marginLeft="40dp"
+                android:layout_width="80dp"
+                android:layout_height="65dp"/>
+            <TextView
+                android:id="@+id/light_selectresultView"
+                android:layout_width="114dp"
+                android:layout_height="65dp"
+                android:layout_marginLeft="10dp"
+                android:elevation="3dp"
+                android:gravity="center_vertical|center_horizontal"
+                android:layout_toRightOf="@id/light_selectView"
+                android:text="미선택"
+                android:textSize="20dp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/light_button_onoff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:background="?attr/selectableItemBackground"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/light_info_linear"
+            android:src="@drawable/light_switch_blue"
+            android:text="" />
+
+        <Button
+            android:id="@+id/light_button_alarm"
+            android:layout_width="180dp"
+            android:layout_height="65dp"
+            android:layout_below="@+id/light_button_onoff"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="22dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="28dp"
+            android:background="@drawable/login_button_shape"
+            android:drawableLeft="@drawable/light_button_shape"
+            android:text="조명 예약 설정"
+            android:textSize="16dp" />
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Calander.Calendar_add_Activity"
+    tools:layout_editor_absoluteY="81dp">
+
+    <TextView
+        android:id="@+id/Cal_day"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="22dp"
+        android:text="TextView"
+        android:textSize="38sp"
+        app:layout_constraintBottom_toTopOf="@+id/Cal_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/Cal_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="13dp"
+        android:layout_marginEnd="13dp"
+        android:layout_marginBottom="135dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        app:layout_constraintBottom_toTopOf="@+id/Cal_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Cal_day" />
+
+    <TextView
+        android:id="@+id/Cal_start_date"
+        android:layout_width="184dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginEnd="14dp"
+        android:layout_marginBottom="15dp"
+        android:text="Start_Cal"
+        android:textColor="#ff000000"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/Cal_end_date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Cal_name" />
+
+    <TextView
+        android:id="@+id/Cal_end_date"
+        android:layout_width="184dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:text="End_Cal"
+        android:textColor="#ff000000"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/Cal_end_time"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Cal_start_date" />
+
+    <TextView
+        android:id="@+id/Cal_start_time"
+        android:layout_width="140dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="16dp"
+        android:gravity="right"
+        android:text="Start_time"
+        android:textColor="#ff000000"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/Cal_start_date"
+        app:layout_constraintTop_toBottomOf="@+id/Cal_name" />
+
+    <TextView
+        android:id="@+id/Cal_end_time"
+        android:layout_width="140dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="16dp"
+        android:gravity="right"
+        android:text="End_time"
+        android:textColor="#ff000000"
+        android:textSize="25sp"
+        app:layout_constraintStart_toEndOf="@+id/Cal_end_date"
+        app:layout_constraintTop_toBottomOf="@+id/Cal_start_time" />
+
+    <EditText
+        android:id="@+id/Cal_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginEnd="14dp"
+        android:layout_marginBottom="192dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Contents"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Cal_name" />
+
+    <Button
+        android:id="@+id/Cal_save"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="69dp"
+        android:layout_marginBottom="17dp"
+        android:text="Save"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/Cal_cancel"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/Cal_cancel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="17dp"
+        android:layout_marginBottom="17dp"
+        android:text="Cancel"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/Cal_save" />
+
+</android.support.constraint.ConstraintLayout>

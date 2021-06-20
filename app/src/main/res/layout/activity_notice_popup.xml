@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".Notice.NoticePopupActivity">
+    <!-- 타이틀바 -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:layout_width="60dp"
+            android:layout_height="53dp"
+            android:background="@android:color/transparent"/>
+        <TextView
+            android:id="@+id/notice_popup_title"
+            android:text="title"
+            android:textSize="20sp"
+            android:textColor="#000000"
+            android:gravity="center"
+
+            android:layout_weight="3"
+            android:layout_width="180dp"
+            android:layout_height="53dp" />
+        <Button
+            android:id="@+id/notice_popup_delete"
+            android:layout_weight="1"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:onClick="mDelete_notice_popup"
+            android:text="삭제"
+            android:textColor="#FF0000"
+            android:textSize="15sp" />
+    </LinearLayout>
+    <!-- //end 타이틀바 -->
+
+    <!-- Notice -->
+    <LinearLayout
+        android:padding="24dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:textSize="15sp"
+                android:textColor="#000"
+                android:text="작성자"
+                android:alpha="0.87"
+                android:gravity="center"
+                android:layout_marginBottom="3dp"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/notice_popup_writer"
+                android:textSize="15sp"
+                android:textColor="#000"
+                android:alpha="0.87"
+                android:gravity="center"
+                android:layout_marginBottom="3dp"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:text="작성시간"
+                android:textSize="15sp"
+                android:textColor="#000"
+                android:alpha="0.87"
+                android:gravity="center"
+                android:layout_marginBottom="3dp"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/notice_popup_time"
+                android:textSize="15sp"
+                android:textColor="#000"
+                android:alpha="0.87"
+                android:gravity="center"
+                android:layout_marginBottom="3dp"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <View
+            android:background="#666666"
+            android:layout_width="match_parent"
+            android:layout_height="1dp" />
+        <TextView
+            android:id="@+id/notice_popup_content"
+            android:textSize="15sp"
+            android:textColor="#000"
+            android:alpha="0.87"
+            android:gravity="center"
+            android:layout_marginBottom="3dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <!-- Notice -->
+
+    <View
+        android:background="#666666"
+        android:layout_width="match_parent"
+        android:layout_height="1dp" />
+
+    <!-- 닫기 버튼 -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
+            android:background="#00000000"
+            android:gravity="center"
+            android:onClick="mOnClose_notice_popup"
+            android:padding="16dp"
+            android:text="닫기"
+            android:textColor="#000000"
+            android:textSize="15sp" />
+    </LinearLayout>
+    <!--// 닫기 버튼 -->
+</LinearLayout>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Notice.NoticeAddActivity">
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/notice_add_imageView"
+        android:textColor="#000000"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:text="공지 등록"
+        android:layout_marginTop="216dp"
+        android:id="@+id/notice_add_textView"/>
+
+    <Button
+        android:layout_height="wrap_content"
+        android:layout_width="110dp"
+        android:text="취소"
+        android:id="@+id/notice_add_button_Cancel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/login_button_shape"
+        android:layout_marginBottom="112dp"
+        android:layout_marginEnd="16dp"/>
+
+    <Button
+        android:layout_height="wrap_content"
+        android:layout_width="110dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="공지등록"
+        android:id="@+id/notice_add_button_OK"
+        android:background="@drawable/login_button_shape"
+        app:layout_constraintBaseline_toBaselineOf="@+id/notice_add_button_Cancel"
+        android:layout_marginStart="40dp"/>
+
+    <ImageView
+        android:layout_height="0dp"
+        android:layout_width="92dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="80dp"
+        android:id="@+id/notice_add_imageView"
+        android:layout_marginBottom="12dp"
+        android:layout_marginStart="40dp"
+        app:srcCompat="@mipmap/ic_launcher_new_foreground"
+        app:layout_constraintBottom_toTopOf="@+id/notice_add_textView"/>
+
+    <EditText
+        android:layout_height="wrap_content"
+        android:layout_width="200dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="37dp"
+        android:id="@+id/notice_add_edit_name"
+        android:layout_marginStart="40dp"
+        app:layout_constraintTop_toBottomOf="@+id/notice_add_textView"
+        android:hint="공지 이름을 입력하세요"/>
+
+
+    <EditText
+        android:layout_height="wrap_content"
+        android:layout_width="200dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="72dp"
+        android:id="@+id/notice_add_edit_content"
+        android:layout_marginStart="40dp"
+        app:layout_constraintTop_toBottomOf="@+id/notice_add_edit_name"
+        android:hint="내용을 입력하세요"/>
+
+</android.support.constraint.ConstraintLayout>

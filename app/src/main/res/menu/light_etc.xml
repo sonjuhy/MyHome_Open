@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_light_etc_refresh"
+        android:orderInCategory="100"
+        android:title="새로고침"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_light_etc_reservelist"
+        android:orderInCategory="100"
+        android:title="예약목록"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_light_etc_markclear"
+        android:orderInCategory="100"
+        android:title="즐겨찾기 초기화"
+        app:showAsAction="never" />
+</menu>

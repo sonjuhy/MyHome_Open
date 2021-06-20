@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Setting.ChangeUserDataActivity">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="62dp"
+        android:text="회원 정보 수정"
+        android:textSize="32dp"
+        app:layout_constraintEnd_toEndOf="@+id/edit_name_update"
+        app:layout_constraintStart_toStartOf="@+id/edit_name_update"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edit_name_update"
+        android:layout_width="0dp"
+        android:layout_height="67dp"
+        android:layout_marginTop="136dp"
+        android:layout_marginBottom="135dp"
+        android:ems="10"
+        android:hint="Name"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/edit_PW_update"
+        app:layout_constraintEnd_toEndOf="@+id/edit_ID_update"
+        app:layout_constraintStart_toStartOf="@+id/edit_ID_update"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edit_ID_update"
+        android:layout_width="0dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="104dp"
+        android:layout_marginBottom="104dp"
+        android:ems="10"
+        android:hint="ID"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="@+id/edit_PW_update"
+        app:layout_constraintEnd_toEndOf="@+id/edit_PW_update"
+        app:layout_constraintStart_toStartOf="@+id/edit_PW_update"
+        app:layout_constraintTop_toTopOf="@+id/edit_name_update" />
+
+    <EditText
+        android:id="@+id/edit_PW_update"
+        android:layout_width="0dp"
+        android:layout_height="71dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:ems="10"
+        android:hint="PW"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button_Cancel_update"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button_OK_update"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="확인"
+        app:layout_constraintBottom_toBottomOf="@+id/button_Cancel_update"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/button_Cancel_update" />
+
+    <Button
+        android:id="@+id/button_Cancel_update"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="59dp"
+        android:layout_marginBottom="118dp"
+        android:text="취소"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

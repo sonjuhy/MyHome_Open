@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_chat"
+            android:title="채팅"
+            />
+        <item
+            android:id="@+id/nav_calender"
+            android:title="캘린더"
+            />
+
+        <item
+            android:id="@+id/nav_FileServer"
+            android:title="파일 서버"
+            />
+        <item
+            android:id="@+id/nav_Light"
+            android:title="실내 조명"
+            />
+    </group>
+
+    <item android:title="Setting">
+        <menu>
+            <item
+                android:id="@+id/nav_setting"
+                android:icon="@drawable/ic_menu_manage"
+                android:title="설정"
+                />
+            <item
+                android:id="@+id/nav_devlog"
+                android:icon="@drawable/ic_menu_slideshow"
+                android:title="개발자 로그"
+                />
+        </menu>
+    </item>
+
+</menu>

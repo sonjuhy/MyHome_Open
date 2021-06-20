@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SigninActivity">
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/Signin_imageView"
+        android:textColor="#000000"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:text="회원가입"
+        android:layout_marginTop="136dp"
+        android:id="@+id/Signin_textView"/>
+
+    <Button
+        android:layout_height="wrap_content"
+        android:layout_width="110dp"
+        android:text="취소"
+        android:id="@+id/button_Cancel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/login_button_shape"
+        android:layout_marginBottom="112dp"
+        android:layout_marginEnd="16dp"/>
+
+    <Button
+        android:layout_height="wrap_content"
+        android:layout_width="110dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="회원가입"
+        android:id="@+id/button_OK"
+        android:background="@drawable/login_button_shape"
+        app:layout_constraintBaseline_toBaselineOf="@+id/button_Cancel"
+        android:layout_marginStart="40dp"/>
+
+    <Button
+        android:layout_height="wrap_content"
+        android:layout_width="110dp"
+        android:text="ID 체크"
+        android:id="@+id/button_OverlapCheck"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/login_button_shape"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/edit_ID"/>
+
+    <ImageView
+        android:layout_height="0dp"
+        android:layout_width="92dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"
+        android:id="@+id/Signin_imageView"
+        android:layout_marginBottom="12dp"
+        android:layout_marginStart="40dp"
+        app:srcCompat="@mipmap/ic_launcher_new_foreground"
+        app:layout_constraintBottom_toTopOf="@+id/Signin_textView"/>
+
+    <EditText
+        android:layout_height="wrap_content"
+        android:layout_width="200dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="37dp"
+        android:id="@+id/edit_name"
+        android:layout_marginStart="40dp"
+        app:layout_constraintTop_toBottomOf="@+id/Signin_textView"
+        android:hint="이름을 입력하세요"/>
+
+    <EditText
+        android:layout_height="wrap_content"
+        android:layout_width="200dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="192dp"
+        android:id="@+id/edit_ID"
+        android:layout_marginBottom="191dp"
+        android:layout_marginStart="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/button_OK"
+        app:layout_constraintTop_toBottomOf="@+id/Signin_imageView"
+        android:hint="아이디를 입력하세요"
+        app:layout_constraintVertical_bias="0.0"/>
+
+    <EditText
+        android:layout_height="wrap_content"
+        android:layout_width="200dp"
+        app:layout_constraintStart_toStartOf="
+        parent" android:layout_marginTop="72dp"
+        android:id="@+id/edit_PW"
+        android:layout_marginStart="40dp"
+        app:layout_constraintTop_toBottomOf="@+id/edit_ID"
+        android:hint="비밀번호를 입력하세요"/>
+
+</android.support.constraint.ConstraintLayout>
